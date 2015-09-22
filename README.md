@@ -3,9 +3,8 @@ Genesis Material Design Lite Child Theme
 
 This child theme is made for Genesis and uses components and style elements/directives from Material design lite.
 
-Master branch gives you a pre-compiled theme ready to use, and also all the tools you need to configure your own js and css files(gulp and codekit).
+This branch gives you a pre-compiled theme ready to use, and also all the tools you need to configure your own js and css files(gulp and codekit).
 
-Specific [`gulp`](https://github.com/g-kanoufi/genesis-material-design-lite-child-theme/tree/gulp) and [`codekit`](https://github.com/g-kanoufi/genesis-material-design-lite-child-theme/tree/codekit) versions are also available.
 
 In any case, you can use it as is by cloning/downloading the .zip file.
 
