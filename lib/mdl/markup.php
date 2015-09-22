@@ -156,7 +156,7 @@ function gmdl_layout_options_modify_classes_to_add( $classes_to_add ) {
 
     // sidebar-sidebar-content  // not yet supported
      if ( 'sidebar-sidebar-content' === $layout ) {
-	$classes_to_add['content'] .= ' mdl-cell--6-col mdl-cell--order-3-desktop';
+	$classes_to_add['content'] .= ' mdl-cell--8-col-tablet mdl-cell--6-col mdl-cell--order-3-desktop';
 	$classes_to_add['sidebar-primary'] .= ' mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--order-1-desktop mdl-grid';
 	$classes_to_add['sidebar-secondary'] .= ' mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--order-2-desktop mdl-grid';
 
@@ -164,7 +164,7 @@ function gmdl_layout_options_modify_classes_to_add( $classes_to_add ) {
 
     // sidebar-content-sidebar
      if ( 'sidebar-content-sidebar' === $layout ) {
-	$classes_to_add['content'] .= ' mdl-cell--6-col mdl-cell--order-2-desktop';
+	$classes_to_add['content'] .= ' mdl-cell--8-col-tablet mdl-cell--6-col mdl-cell--order-2-desktop';
 	$classes_to_add['sidebar-primary'] .= ' mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--order-1-desktop mdl-grid';
 	$classes_to_add['sidebar-secondary'] .= ' mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--order-3-desktop mdl-grid';
     }
