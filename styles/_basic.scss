@@ -1,0 +1,438 @@
+
+// Basic color and padding styles
+
+body{
+  font-size:100%;
+  background:#fafafa;
+}
+
+.site-inner{
+  padding:2em 0;
+}
+
+
+// h1 site-title
+.site-title{
+  font-size:24px;
+
+  a{
+    text-decoration:none;
+    color:#fff;
+  }
+}
+
+// Basic responsive max-width for img, embeds, svgs, etc...
+audio, canvas, iframe, img, svg, video{
+  max-width:100%;
+  height:auto;
+}
+
+// Add genesis basic styling for superfish sub menu as no support for dropdown multi level menu with mdl
+.mdl-layout__header-row .mdl-navigation__link{
+  padding:0 12px;
+}
+.mdl-navigation__link {
+  a {
+    position:relative;
+    display:block;
+    font-family: $preferred_font;
+    color: #fff;
+    text-decoration: none;
+    padding:0 12px;
+    text-transform:uppercase;
+  }
+  &.is-active > a:after, &:hover > a:after{
+    height: 2px;
+    width: 100%;
+    display: block;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: #fff;
+  }
+}
+
+
+
+ul.sub-menu {
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s ease-in-out;
+    width: auto;
+    background:#fff;
+    z-index: 99;
+    margin-top:-6px;
+    padding-left:0;
+
+    a{
+      color:#666;
+      font-size:12px;
+    }
+
+    ul.sub-menu{
+      left:-50%!important;
+    }
+}
+
+// Search button
+.search-form .postfix{
+  padding:0;
+}
+
+// Some basic styling for the drawer menu
+.mdl-layout__drawer{
+    overflow:visible;
+
+    .site-title{
+      font-size:20px;
+      text-align:center;
+      margin-top:18px;
+      margin-bottom:0;
+      padding-bottom:18px;
+      border-bottom:2px solid $layout-nav-color;
+    }
+
+    ul{
+      padding-left:0;
+    }
+
+    a{
+      color:#666;
+      
+    }
+    .mdl-navigation__link.is-active>a:after, .mdl-navigation__link:hover>a:after{
+      display:none
+    }
+    .mdl-navigation__link.is-active{
+      background:$layout-nav-color;
+    }
+    
+    .sfHover{
+      .sub-menu{
+        right: -90%;
+        margin-top: -32px;
+        .sub-menu{
+          right:auto;
+          margin-top:12px;
+        }
+      }
+    }
+}
+
+//Breadcrumb
+.breadcrumb{
+  background:$layout-nav-color;
+  margin-top:16px;
+  padding: 1% 2%;
+  font-size: .9em;
+  color: $headings-color;
+}
+
+// Main content
+.content{
+  background:#fff;
+  padding:1% 2%
+}
+
+// For blog listing and archive no shadow no bg as showing cards
+.archive-title{
+  display:none;
+}
+
+.blog, .archive{
+  .post:nth-of-type(1){
+    margin-top:32px;
+  }
+
+  .content{
+    background:none;
+    box-shadow:none;
+  }
+}
+
+.mdl-card__title{
+  background-color: unquote("rgb(#{$color-primary-dark})");
+  background-size:cover;
+  min-height:$card-cover-image-height;
+
+  .entry-title, a{
+    color:#fff;
+    text-decoration:none;
+  }
+}
+
+.mdl-card{
+  width:100%;
+}
+
+.post{
+  margin-bottom:2em;
+
+  .entry-meta{
+    font-size:.8em;
+    margin-bottom:0;
+
+    span, time{
+      color:$headings-color;
+    }
+  }
+}
+
+// Gallery post
+ul.gallery{
+  list-style:none;
+  padding:0;
+  
+  img{
+    width:100%;
+  }
+}
+
+// Video post, just adding some flex video styles
+.flex-video {
+    height: 0;
+    margin-bottom: 0.88889rem;
+    overflow: hidden;
+    padding-bottom: 67.5%;
+    padding-top: 1.38889rem;
+    position: relative;
+  
+    &.vimeo{
+      padding-top:0;
+    }
+}
+.flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+// Blogs nav and pagination lists
+.pagination{
+  list-style:none;
+  padding:0;
+
+  li{
+    display:inline-block;
+    margin:0;
+    line-height:32px;
+
+    &.current a{
+      color:#fff;
+      background:unquote("rgb(#{$color-accent})");
+    }
+  }
+
+  a{
+    display:block;
+    text-decoration:none;
+    min-width:32px;
+  }
+}
+.pagination-next .mdl-button--icon{
+  margin-left:12px;  
+}
+.pagination-previous .mdl-button--icon{
+  margin-right:12px;  
+}
+
+//Single Post
+.single{
+  .content{
+    padding:0;
+  }
+  .breadcrumb{
+    margin-top:0;
+  }
+}
+
+.author-box{
+  min-height:100px;
+  background: #f5f5f5;
+  padding: 2% 2% 1%;
+
+  img{
+    float: left;
+    margin-right: 2em;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+
+}
+.author-box-title{
+  font-size:1.25em;
+}
+.author-box-content{
+  color:$headings-color;
+}
+
+ul.pagination li.alignright{
+  float:right;
+}
+
+//Comments
+.entry-comments{
+  background: #f5f5f5;
+  padding:2%;
+
+  h3{
+    color:$headings-color;
+  }
+}
+.comment-list{
+  padding: 4% 2% 2%;
+  margin: 0;
+  list-style: none;
+
+  & > li{
+    padding-bottom: .5em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  & > li:last-child{
+    border:none;
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+
+  article{
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    color:$headings-color;
+  }
+
+  .children{
+    list-style: none;
+    margin-left: 2em;
+    padding-left: 1em;
+  }
+}
+
+.comment-author{
+  margin-bottom:0;
+
+  .avatar{
+    float: left;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: 4px solid #f5f5f5;
+  }
+}
+
+.comment-respond{
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: normal;
+  width: 100%;
+  background-color: transparent;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.mdl-textfield{
+  min-width:60%;
+}
+textarea.mdl-textfield{
+  min-width:80%;
+}
+
+//Sidebar
+.sidebar{
+  .widget{
+    padding: 1em;
+  }
+
+  .avatar{
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+}
+
+.widget_search{
+  input{
+    margin-bottom:0;
+  }
+}
+
+// Widgets
+.widget{ 
+  margin-bottom:2em;
+  color:$headings-color;
+
+  ul{
+    margin:0;
+    padding-left:0;
+  }
+  li{
+    list-style-type:none;
+  }
+  a{
+    color:$headings-color;
+    &:hover{
+      color:$headings-color;
+    }
+  }
+  .textwidget{
+    color:$headings-color;
+  }
+}
+
+.widget-title{
+  border-bottom:1px solid #ccc;
+  margin: 0 0 .5em;
+  padding-bottom: .3em;
+}
+
+// Footer Widgets && Footer
+
+.site-footer{
+  background:#212121;
+  padding:1% 2%;
+  text-align:center;
+  color:#fff;
+
+  p{
+    margin-bottom:0;
+    padding:1em 0;
+    font-size:.8em;
+  }
+}
+.♥{
+  color:#EC0018;
+}
+
+// Feather light modification to fit better in material design lite
+.featherlight:last-of-type {
+    background: hsla(0, 0%, 100%, .8)!important;
+}
+
+.featherlight{ 
+  .featherlight-content{
+      overflow:initial!important;
+      padding:0!important;
+      border-bottom:none!important;
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),
+                  0 1px 10px 0 rgba(0,0,0,0.12),
+                  0 2px 4px -1px rgba(0,0,0,0.2) !important;
+    }
+
+    .featherlight-next, .featherlight-previous{
+      background:none!important;
+      
+      .material-icons{
+        font-size:64px!important;
+        text-shadow:none!important;
+      }
+    }
+
+    .featherlight-close-icon{
+      top:-20px!important;
+      background:none!important;
+    }
+}
+

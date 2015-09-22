@@ -1,0 +1,246 @@
+/**
+ * Featherlight – ultra slim jQuery lightbox
+ * Version 1.3.4 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2015, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight {
+    display: none;
+
+    /* dimensions: spanning the background from edge to edge */
+    position:fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 2147483647; /* z-index needs to be >= elements on the site. */
+
+    /* position: centering content */
+    text-align: center;
+
+    /* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+    white-space: nowrap;
+
+    /* styling */
+    cursor: pointer;
+    background: #333;
+    /* IE8 "hack" for nested featherlights */
+    background: rgba(0, 0, 0, 0);
+  }
+
+  /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+  .featherlight:last-of-type {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .featherlight:before {
+    /* position: trick to center content vertically */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  .featherlight .featherlight-content {
+    /* make content container for positioned elements (close button) */
+    position: relative;
+
+    /* position: centering vertical and horizontal */
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+
+    /* dimensions: cut off images */
+    overflow: auto;
+    padding: 25px 25px 0;
+    border-bottom: 25px solid transparent;
+
+    /* dimensions: handling small or empty content */
+    min-width:  30%;
+
+    /* dimensions: handling large content */
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 95%;
+
+    /* styling */
+    background: #fff;
+    cursor: auto;
+
+    /* reset white-space wrapping */
+    white-space: normal;
+  }
+
+  /* contains the content */
+  .featherlight .featherlight-inner {
+    /* make sure its visible */
+    display: block;
+  }
+
+  .featherlight .featherlight-close-icon {
+    /* position: centering vertical and horizontal */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+
+    /* dimensions: 25px x 25px */
+    line-height: 25px;
+    width: 25px;
+
+    /* styling */
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff; /* Set the background in case it overlaps the content */
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+  }
+
+
+  .featherlight .featherlight-image {
+    /* styling */
+    width: 100%;
+  }
+
+
+  .featherlight-iframe .featherlight-content {
+    /* removed the border for image croping since iframe is edge to edge */
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .featherlight iframe {
+    /* styling */
+    border: none;
+  }
+}
+
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight .featherlight-content {
+    /* dimensions: maximize lightbox with for small screens */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 98%;
+
+    padding: 10px 10px 0;
+    border-bottom: 10px solid transparent;
+  }
+}
+
+
+/**
+ * Featherlight Gallery – an extension for the ultra slim jQuery lightbox
+ * Version 1.3.4 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2015, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight-next,
+  .featherlight-previous {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    bottom: 0;
+    left: 80%;
+    cursor: pointer;
+    /* preventing text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* IE9 hack, otherwise navigation doesn't appear */
+    background: rgba(0,0,0,0);
+  }
+
+  .featherlight-previous {
+    left: 25px;
+    right: 80%;
+  }
+
+  .featherlight-next:hover,
+  .featherlight-previous:hover {
+    background: rgba(255,255,255,0.25);
+  }
+
+
+  .featherlight-next span,
+  .featherlight-previous span {
+    display: none;
+    position: absolute;
+
+    top: 50%;
+    left: 5%;
+    width: 82%;
+
+    /* center horizontally */
+    text-align: center;
+
+    font-size: 80px;
+    line-height: 80px;
+
+    /* center vertically */
+    margin-top: -40px;
+
+    text-shadow: 0px 0px 5px #fff;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .featherlight-next span {
+    right: 5%;
+    left: auto;
+  }
+
+
+  .featherlight-next:hover span,
+  .featherlight-previous:hover span {
+    display: inline-block;
+  }
+
+  /* Hide navigation while loading */
+  .featherlight-loading .featherlight-previous, .featherlight-loading .featherlight-next {
+    display:none;
+  }
+}
+
+/* Always display arrows on touch devices */
+@media only screen and (max-device-width: 1024px){
+  .featherlight-next:hover,
+  .featherlight-previous:hover {
+    background: none;
+  }
+  .featherlight-next span,
+  .featherlight-previous span {
+    display: block;
+  }
+}
+
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight-next,
+  .featherlight-previous {
+    top: 10px;
+    right: 10px;
+    left: 85%;
+  }
+
+  .featherlight-previous {
+    left: 10px;
+    right: 85%;
+  }
+
+  .featherlight-next span,
+  .featherlight-previous span {
+    margin-top: -30px;
+    font-size: 40px;
+  }
+}
+
+
+

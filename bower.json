@@ -1,0 +1,25 @@
+{
+  "name": "Material Design Lite Genesis Child Theme",
+  "version": "1.0.0",
+  "homepage": "https://github.com/g-kanoufi/genesis-material-design-lite-child-theme",
+  "authors": [
+    "Guillaume Kanoufi <guillaume@lostwebdesigns.com>"
+  ],
+  "description": "A child theme for Genesis based on Material Design Lite",
+  "keywords": [
+    "Genesis",
+    "Material Design Lite",
+    "Child",
+    "theme"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "material-design-lite": "",
+    "featherlight": ""
+  }
+}
