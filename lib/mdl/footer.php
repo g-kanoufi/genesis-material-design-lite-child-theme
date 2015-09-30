@@ -1,7 +1,14 @@
 <?php
 
 remove_action('genesis_before_footer', 'genesis_footer_widget_areas');
-add_action( 'genesis_before_footer', 'gmdl_footer_widget_areas' );
+add_action( 'genesis_after_content_sidebar_wrap', 'gmdl_footer_widget_areas' );
+
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+add_action( 'genesis_after_content_sidebar_wrap', 'genesis_footer_markup_open', 11 );
+add_action( 'genesis_after_content_sidebar_wrap', 'genesis_do_footer', 12 );
+add_action( 'genesis_after_content_sidebar_wrap', 'genesis_footer_markup_close', 13 );
 /**
  * Echo the markup necessary to facilitate the footer widget areas.
  *

@@ -14,6 +14,7 @@ add_filter( 'genesis_attr_entry-image', 'gmdl_featured_image_class' );
 add_filter( 'genesis_attr_footer-widgets',         'gmdl_add_footer_widget_class');
 
 add_filter( 'genesis_attr_content-sidebar-wrap','gmdl_add_markup_class', 10, 2 );
+add_filter( 'genesis_attr_site-inner', 'gmdl_site_inner_class');
 add_filter( 'genesis_attr_content',             'gmdl_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_sidebar-primary',     'gmdl_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_sidebar-secondary',     'gmdl_add_markup_class', 10, 2 );
@@ -21,7 +22,7 @@ add_filter( 'genesis_attr_archive-pagination',  'gmdl_pagination_markup', 10, 2 
 add_filter( 'genesis_attr_adjacent-entry-pagination', 'gmdl_post_navigation_markup', 10, 2);
 add_filter( 'genesis_attr_footer-widgets',         'gmdl_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_site-footer',         'gmdl_add_markup_class', 10, 2 );
-// modify genesis classes based on genesis_site_layout on foundation
+// modify genesis classes based on genesis_site_layout on material design lite
 add_filter('gmdl-classes-to-add', 'gmdl_modify_classes_based_on_template', 10, 3);
 
 
@@ -58,6 +59,11 @@ function gmdl_add_header_widgetarea_class($attributes){
 function gmdl_add_row_wrap_class($attributes){
     $attributes['class'] .= ' mdl-grid';
     return $attributes;
+}
+
+function gmdl_site_inner_class($attributes) {
+  $attributes['class'] .= ' mdl-layout__content';
+  return $attributes;
 }
 
 // Archive page featured image class

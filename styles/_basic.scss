@@ -7,7 +7,11 @@ body{
 }
 
 .site-inner{
-  padding:2em 0;
+  padding:2em 0 0;
+}
+
+div.content-sidebar-wrap{
+  padding-bottom:2em;
 }
 
 
@@ -111,13 +115,28 @@ ul.sub-menu {
     
     .sfHover{
       .sub-menu{
-        right: -90%;
-        margin-top: -32px;
+        right: 0;
+        margin-top: 6px;
         .sub-menu{
+          left:0!important;
           right:auto;
           margin-top:12px;
         }
       }
+
+      @media screen and(min-width: 480px){
+        .sub-menu{
+          right: -90%;
+          margin-top: -32px;
+          .sub-menu{
+            left:-50%!important;
+            right:auto;
+            margin-top:12px;
+          }
+        }
+        
+      }
+
     }
 }
 
