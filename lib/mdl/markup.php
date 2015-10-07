@@ -41,7 +41,7 @@ function gmdl_site_container_class($attributes){
 
 // Header Class
 function gmdl_add_header_class($attributes){
-    $attributes['class'] = 'mdl-layout__header is-casting-shadow';
+    $attributes['class'] = 'mdl-layout__header mdl-layout__header--scroll  is-casting-shadow';
     return $attributes;
 }
 // Header Title Area
