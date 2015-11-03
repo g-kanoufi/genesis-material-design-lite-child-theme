@@ -49,7 +49,7 @@ function gmdl_genesis_mdl_search_primary_nav_menu( $menu, stdClass $args ){
   if ( 'primary' == $args->theme_location || 'drawer' == $args->theme_location){
         if( genesis_get_option( 'nav_extras' ) )
           return $menu;
-    $menu .= get_search_form(false) ;
+    $menu .= '<li class="menu-item menu-item__search">'.get_search_form(false).'</li>' ;
     return $menu;
   }
   else{
