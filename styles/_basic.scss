@@ -32,6 +32,9 @@ audio, canvas, iframe, img, svg, video{
 }
 
 // Add genesis basic styling for superfish sub menu as no support for dropdown multi level menu with mdl
+.menu-item{
+  list-style:none;
+}
 .mdl-layout__header-row .mdl-navigation__link{
   padding:0 12px;
 }
