@@ -670,7 +670,8 @@ a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:bloc
 .menu .menu-item:focus{position:static}.menu .menu-item>a:focus+ul.sub-menu,.menu .menu-item.sfHover>ul.sub-menu{left:auto;opacity:1}
 body{font-size:100%;background:#fafafa}.site-inner{padding:2em 0 0}div.content-sidebar-wrap{padding-bottom:2em}
 .site-title{font-size:24px}.site-title a{text-decoration:none;color:#fff}audio,canvas,iframe,img,svg,video{max-width:100%;height:auto}
-.mdl-layout__header-row .mdl-navigation__link{padding:0 12px}.mdl-navigation__link a{position:relative;display:block;font-family:"Roboto","Helvetica","Arial",sans-serif;color:#fff;text-decoration:none;padding:0 12px;text-transform:uppercase}
+.menu-item{list-style:none}.mdl-layout__header-row .mdl-navigation__link{padding:0 12px}
+.mdl-navigation__link a{position:relative;display:block;font-family:"Roboto","Helvetica","Arial",sans-serif;color:#fff;text-decoration:none;padding:0 12px;text-transform:uppercase}
 .mdl-navigation__link.is-active>a:after,.mdl-navigation__link:hover>a:after{height:2px;width:100%;display:block;content:" ";bottom:0;left:0;position:absolute;background:#fff}
 ul.sub-menu{left:-9999px;opacity:0;position:absolute;-webkit-transition:opacity .4s ease-in-out;transition:opacity .4s ease-in-out;width:auto;background:#fff;z-index:99;margin-top:-6px;padding-left:0}
 ul.sub-menu a{color:#666;font-size:12px}ul.sub-menu ul.sub-menu{left:-50% !important}
