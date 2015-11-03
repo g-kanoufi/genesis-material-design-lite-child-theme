@@ -82,7 +82,7 @@ function gmdl_numeric_posts_nav() {
 
 	//* Previous Post Link
 	if ( get_previous_posts_link() )
-		printf( '<li class="pagination-previous alignleft">%s</li>' . "\n", get_previous_posts_link( apply_filters( 'genesis_prev_link_text', '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">arrow_back</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>' . __( 'Previous Page', 'genesis' ) ) ) ); //* Link to first page, plus ellipses if necessary
+		printf( '<li class="pagination-previous alignleft">%s</li>' . "\n", get_previous_posts_link( apply_filters( 'genesis_prev_link_text', '<span class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">arrow_back</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>' . __( 'Previous Page', 'genesis' ) ) ) ); //* Link to first page, plus ellipses if necessary
 	if ( ! in_array( 1, $links ) ) {
 
 		$class = 1 == $paged ? ' class="current"' : '';
@@ -114,7 +114,7 @@ function gmdl_numeric_posts_nav() {
 
 	//* Next Post Link
 	if ( get_next_posts_link() )
-		printf( '<li class="pagination-next alignright">%s</li>' . "\n", get_next_posts_link( apply_filters( 'genesis_next_link_text', __( 'Next Page', 'genesis' ) . '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent  mdl-color-text--white role="presentation" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">arrow_forward</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>' ) ) );
+		printf( '<li class="pagination-next alignright">%s</li>' . "\n", get_next_posts_link( apply_filters( 'genesis_next_link_text', __( 'Next Page', 'genesis' ) . '<span class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent  mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">arrow_forward</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>' ) ) );
 	echo '</ul></div>' . "\n";
 
 }

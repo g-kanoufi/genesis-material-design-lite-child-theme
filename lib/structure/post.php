@@ -25,7 +25,7 @@ add_filter( 'get_the_content_more_link', 'gmdl_truncated_excerpt_link' );
  */
 function gmdl_truncated_excerpt_link() {
 
-	return '... <p><a class="more-link mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="' . get_permalink() . '">'.__("Read More", 'genesis-material-design-lite-child-theme' ).'</a></p>';
+	return '...</p><p><a class="more-link mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="' . get_permalink() . '">'.__("Read More", 'genesis-material-design-lite-child-theme' ).'</a>';
 
 }
 
@@ -77,13 +77,13 @@ function gmdl_prev_next_post_nav(){
 	) );
 
 	echo '<li class="arrow pagination-previous alignleft">';
-	previous_post_link('%link', '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent  mdl-color-text--white role=" presentation"="" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">keyboard_arrow_left</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button> %title');
+	previous_post_link('%link', '<span class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent  mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">keyboard_arrow_left</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span> %title');
 	echo '</li>';
 
         echo '<li class="section-spacer"></li>';
 
 	echo '<li class="arrow pagination-next alignright">';
-	next_post_link('%link', '%title <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent  mdl-color-text--white role=" presentation"="" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">keyboard_arrow_right</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>');
+	next_post_link('%link', '%title <span class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent  mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">keyboard_arrow_right</i><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>');
 	echo '</li>';
 
 	echo '</ul></div>';
