@@ -86,8 +86,8 @@ function gmdl_do_header() {
 			remove_filter( 'wp_nav_menu', 'genesis_header_menu_wrap' );
 
 		genesis_markup( array(
-			'html5' => '</aside>',
-			'xhtml' => '</div>',
+			'html5' => '</aside></div>',
+			'xhtml' => '</div></div>',
 		) );
 	}
 
@@ -124,7 +124,7 @@ function gmdl_seo_site_title() {
 
         // Build the title
         $title  = genesis_html5() ? sprintf( "<div class='name'><{$wrap} %s>", genesis_attr( 'site-title' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );
-        $title .= genesis_html5() ? "{$inside}</{$wrap}></li>" : '';
+        $title .= genesis_html5() ? "{$inside}</{$wrap}>" : '';
         // Echo (filtered)
         echo apply_filters( 'genesis_seo_title', $title, $inside, $wrap );
 
