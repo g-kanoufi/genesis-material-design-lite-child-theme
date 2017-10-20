@@ -1,5 +1,3 @@
-$bower_path: "../bower_components/material-design-lite/src/";
-
 /* Material Design Lite */
 
 // Variables and mixins
@@ -8,33 +6,33 @@ $bower_path: "../bower_components/material-design-lite/src/";
 @import "variables";
 
 // Resets and dependencies
-@import "../bower_components/material-design-lite/src/resets/resets";
-@import "../bower_components/material-design-lite/src/typography/typography";
+@import "../node_modules/material-design-lite/src/resets/resets";
+@import "../node_modules/material-design-lite/src/typography/typography";
 
 // Components
-@import "../bower_components/material-design-lite/src/palette/palette";
-@import "../bower_components/material-design-lite/src/ripple/ripple";
-@import "../bower_components/material-design-lite/src/animation/animation";
-@import "../bower_components/material-design-lite/src/badge/badge";
-@import "../bower_components/material-design-lite/src/button/button";
-@import "../bower_components/material-design-lite/src/card/card";
-@import "../bower_components/material-design-lite/src/checkbox/checkbox";
-@import "../bower_components/material-design-lite/src/data-table/data-table";
-@import "../bower_components/material-design-lite/src/footer/mega_footer";
-@import "../bower_components/material-design-lite/src/footer/mini_footer";
-@import "../bower_components/material-design-lite/src/icon-toggle/icon-toggle";
-@import "../bower_components/material-design-lite/src/menu/menu";
-@import "../bower_components/material-design-lite/src/progress/progress";
-@import "../bower_components/material-design-lite/src/layout/layout";
-@import "../bower_components/material-design-lite/src/radio/radio";
-@import "../bower_components/material-design-lite/src/slider/slider";
-@import "../bower_components/material-design-lite/src/spinner/spinner";
-@import "../bower_components/material-design-lite/src/switch/switch";
-@import "../bower_components/material-design-lite/src/tabs/tabs";
-@import "../bower_components/material-design-lite/src/textfield/textfield";
-@import "../bower_components/material-design-lite/src/tooltip/tooltip";
-@import "../bower_components/material-design-lite/src/shadow/shadow";
-@import "../bower_components/material-design-lite/src/grid/grid";
+@import "../node_modules/material-design-lite/src/palette/palette";
+@import "../node_modules/material-design-lite/src/ripple/ripple";
+@import "../node_modules/material-design-lite/src/animation/animation";
+@import "../node_modules/material-design-lite/src/badge/badge";
+@import "../node_modules/material-design-lite/src/button/button";
+@import "../node_modules/material-design-lite/src/card/card";
+@import "../node_modules/material-design-lite/src/checkbox/checkbox";
+@import "../node_modules/material-design-lite/src/data-table/data-table";
+@import "../node_modules/material-design-lite/src/footer/mega_footer";
+@import "../node_modules/material-design-lite/src/footer/mini_footer";
+@import "../node_modules/material-design-lite/src/icon-toggle/icon-toggle";
+@import "../node_modules/material-design-lite/src/menu/menu";
+@import "../node_modules/material-design-lite/src/progress/progress";
+@import "../node_modules/material-design-lite/src/layout/layout";
+@import "../node_modules/material-design-lite/src/radio/radio";
+@import "../node_modules/material-design-lite/src/slider/slider";
+@import "../node_modules/material-design-lite/src/spinner/spinner";
+@import "../node_modules/material-design-lite/src/switch/switch";
+@import "../node_modules/material-design-lite/src/tabs/tabs";
+@import "../node_modules/material-design-lite/src/textfield/textfield";
+@import "../node_modules/material-design-lite/src/tooltip/tooltip";
+@import "../node_modules/material-design-lite/src/shadow/shadow";
+@import "../node_modules/material-design-lite/src/grid/grid";
 
 // Add featherlight css
 @import "featherlight";

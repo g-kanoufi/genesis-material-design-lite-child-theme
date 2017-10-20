@@ -20,10 +20,11 @@ How to use
 
 Nothing is more easy, download .zip or clone this repository, add it to your themes folder or upload it(only a .zip file) from your website adminstration panel and you are ready to go.
 
-If you want to use it with gulp, just run `bower install && npm install` to install all dependencies, then just run `gulp`.
+If you want to use it with gulp, this theme now uses the really well done [WPGULP](https://github.com/ahmadawais/WPGulp) so this gulp file may always stay updated. 
+Just set up your project variables in the gulpfile, run `npm install` to install all dependencies, then just run `gulp`.
 A `gulp build` task is also prepacked giving you your optimized theme in a ready to upload .zip file
 
-Prefer codekit, easy, just run `bower install` and you are good to go.
+Prefer codekit, easy, just run `npm install` and you are good to go.
 
 Included is a dummy-content.xml file if you ever need some content, it's actually taken from Genesis base child Theme.
 
