@@ -37,7 +37,7 @@ var productURL              = './'; // Theme/Plugin URL. Leave it like it is, si
 var text_domain             = 'mdl-child'; // Your textdomain here.
 var translationFile         = 'mdl-child.pot'; // Name of the transalation file.
 var translationDestination  = './languages'; // Where to save the translation files.
-var packageName             = 'material-desing-lite-child'; // Package name.
+var packageName             = 'material-design-lite-child'; // Package name.
 var bugReport               = ''; // Where can users report bugs.
 var lastTranslator          = '<your_email@email.com>'; // Last translator Email ID.
 var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID.
@@ -47,14 +47,39 @@ var styleSRC                = './styles/app.scss'; // Path to main .scss file.
 var styleDestination        = './'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
-// JS Vendor related.
-var jsVendorSRC             = './js/app.js'; // Path to JS vendor folder.
+// JS Vendor related. All the mdl scripts, comment/uncomment as necessary
+var jsVendorSRC = [
+  // Component handler
+  './node_modules/material-design-lite/src/mdlComponentHandler.js',
+  // Polyfills/dependencies
+  './node_modules/material-design-lite/src/third_party/**/*.js',
+  // Base components
+  './node_modules/material-design-lite/src/button/button.js',
+  // './node_modules/material-design-lite/src/checkbox/checkbox.js',
+  // './node_modules/material-design-lite/src/icon-toggle/icon-toggle.js',
+  // './node_modules/material-design-lite/src/menu/menu.js',
+  // './node_modules/material-design-lite/src/progress/progress.js',
+  // './node_modules/material-design-lite/src/radio/radio.js',
+  // './node_modules/material-design-lite/src/slider/slider.js',
+  // './node_modules/material-design-lite/src/spinner/spinner.js',
+  // './node_modules/material-design-lite/src/switch/switch.js',
+  './node_modules/material-design-lite/src/tabs/tabs.js',
+  './node_modules/material-design-lite/src/textfield/textfield.js',
+  // './node_modules/material-design-lite/src/tooltip/tooltip.js',
+  // Complex components (which reuse base components)
+  './node_modules/material-design-lite/src/layout/layout.js',
+  // './node_modules/material-design-lite/src/data-table/data-table.js',
+  // And finally, the ripples
+  // './node_modules/material-design-lite/src/ripple/ripple.js',
+  './js/app.js'
+];
+
 var jsVendorDestination     = './js/min/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'app'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
 
 // JS Custom related.
-var jsCustomSRC             = '/js/scripts.js'; // Path to JS custom scripts folder.
+var jsCustomSRC             = './js/scripts.js'; // Path to JS custom scripts folder.
 var jsCustomDestination     = './js/min/'; // Path to place the compiled JS custom scripts file.
 var jsCustomFile            = 'scripts'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
@@ -91,7 +116,7 @@ const AUTOPREFIXER_BROWSERS = [
 /**
  * Load Plugins.
  *
- * Load gulp plugins and passing them semantic names.
+ * Load gulp plugins and passign them semantic names.
  */
 var gulp         = require('gulp'); // Gulp of-course
 
@@ -111,7 +136,7 @@ var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG im
 // Utility related plugins.
 var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
 var lineec       = require('gulp-line-ending-corrector'); // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)
-var filter       = require('gulp-filter'); // Enables you to work on a subset of the original files by filtering them using globbing.
+var filter       = require('gulp-filter'); // Enables you to work on a subset of the original files by filtering them usign globbing.
 var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
